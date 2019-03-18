@@ -1,0 +1,84 @@
+$green-color: #5a9e61;
+
+body {
+    font-family: 'Bree Serif', serif;
+    background-image: url("../images/bg-white.png");
+    background-repeat: repeat;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.green {
+    color: $green-color;
+}
+.bg-text-white {
+    background-color: white;
+}
+
+.btn-more {
+    color: white;
+    background-color: $green-color;
+    padding: 1px 2px;
+    border-radius: 0;
+    border: 0 $green-color;
+}
+
+#striped-jumbo {
+    background-image: url("../images/bg-stripe.png");
+    background-repeat: repeat-x;
+    round-clip: round;
+
+}
+
+#stripes-nav a {
+    color: black;
+
+    &.active {
+        color: $green-color;
+    }
+}
+
+
+@media  (min-width: 720px) {
+    #stripes-nav a {
+        padding: 0 5px 0 5px;
+        position: relative;
+
+        &:before {
+            content: " / ";
+            position: absolute;
+            right: 0;
+            color: black;
+        }
+
+        &:last-child:before {
+            content: " ";
+        }
+    }
+}
+
+
+@media  (min-width: 320px) and (max-width: 719px) {
+    #stripes-nav, h3 {
+        width: 100%;
+    }
+
+    #stripes-nav a {
+        text-transform: uppercase;
+        border-bottom: 2px solid black;
+
+        &.active {
+            border-color: $green-color;
+        }
+    }
+
+    #striped-jumbo {
+        background-image: none;
+    }
+}
+
+.social-icons a img:hover {
+    opacity: .7;
+}
+
